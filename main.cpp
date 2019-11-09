@@ -19,15 +19,15 @@ int main() {
     win1 = newwin(row, col/2 - 1, 0, 0);
     box(win1, 0, 0);
     WINDOW *win2;
-    win2 = newwin(row, col/2 - 1, 0, col / 2);
+    win2 = newwin(row, col/2 - 1, 0, col/2);
     box(win2, 0, 0);
     refresh();
 
     wrefresh(win1);
     wrefresh(win2);
 
-    for (int x = 1; x <= row; ++x) {
-        for (int y = 1; y <= col; ++y) {
+    for (int x = 1; x <= col/2 - 3; ++x) {
+        for (int y = 1; y <= row - 2; ++y) {
             mvaddch(y, x, '+');
         }
     }
