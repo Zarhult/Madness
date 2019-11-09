@@ -1,10 +1,15 @@
-#include <iostream>
+#include <ncurses.h>
+#include <stdlib.h>
 #include "drawGrid.hpp"
 
 using namespace std;
 
 int main() {
-    //redraw screen grid after every user input
+    initscr();
+    cbreak();
+    noecho();
 
+
+    endwin();
     return 0;
 }
