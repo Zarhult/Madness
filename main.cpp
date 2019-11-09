@@ -15,6 +15,7 @@ int main() {
     raw(); //don't wait for the user to hit enter
     noecho(); //don't show the user's input
     keypad(stdscr, TRUE); //enable function keys like arrow keys
+    curs_set(0); //hide cursor
 
     int row; //initialize useful variables
     int col;
@@ -39,7 +40,7 @@ int main() {
 
     //initialize player
     player* plyr = new player;
-    plyr->setXY(col/2, row/2, win1);
+    plyr->setYX(row/2, (col/2-1)/2, win1);
 
     getch();
     endwin(); //end

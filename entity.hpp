@@ -7,9 +7,9 @@ class entity {
         int xPos;
         int yPos;
     public:
-        entity() {};
+        entity(char img) : img(img) {};
 
-        void setXY(int x, int y, WINDOW* win) {
+        void setYX(int y, int x, WINDOW* win) {
             mvaddch(this->yPos, this->xPos, '+');
 
             this->xPos = x;

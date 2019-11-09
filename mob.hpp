@@ -9,7 +9,7 @@ class mobBase : public entity {
         int str;
         int hp;
     public:
-        mobBase(int ev, int str, int hp, char img) : ev(ev), str(str), hp(hp), img(img) {};
+        mobBase(int ev, int str, int hp, char img) : ev(ev), str(str), hp(hp), entity(img) {};
 
         // Pure virtual mob functions
 };
