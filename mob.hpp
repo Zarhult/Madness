@@ -8,10 +8,6 @@ class mobBase : public entity {
         int ev;
         int str;
         int hp;
-        char img;
-
-        int xPos;
-        int yPos;
     public:
         mobBase(int ev, int str, int hp, char img) : ev(ev), str(str), hp(hp), img(img) {};
 
@@ -20,7 +16,7 @@ class mobBase : public entity {
 
 class eldritchBitch : public mobBase {
     public:
-        eldritchBitch() : mobBase(5, 5, 5, 'o') {};
+        eldritchBitch() : mobBase(5, 5, 5, '$') {};
 };
 
 #endif

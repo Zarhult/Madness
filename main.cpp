@@ -37,20 +37,13 @@ int main() {
         }
     }
 
-    //initialize player and vector of entities
-    vector<entity *> entities;
+    //initialize player
     player* plyr = new player;
-    entities.push_back(plyr);
-    plyr->setX(col/2);
-    plyr->setY(row/2);
+    plyr->setXY(col/2, row/2, win1);
 
     getch();
     endwin(); //end
     return 0;
-}
-
-void refreshGridEntities(WINDOW* win, vector<entity*> entities) {
-
 }
 
 void randMob(WINDOW* win) {

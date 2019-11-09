@@ -3,16 +3,18 @@
 
 class entity {
     protected:
+        char img;
         int xPos;
         int yPos;
     public:
         entity() {};
 
-        void setX(int x) {
+        void setXY(int x, int y, WINDOW* win) {
+            mvaddch(this->yPos, this->xPos, '+');
+
             this->xPos = x;
-        }
-        void setY(int y) {
             this->yPos = y;
+            mvaddch(y, x, img);
         }
 };
 

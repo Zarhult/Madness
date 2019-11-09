@@ -7,7 +7,7 @@ class player : public entity {
         int str;
         int sanity;
     public:
-        player() : ev(10), str(10), sanity(10) {};
+        player() : ev(10), str(10), sanity(10), img('o') {};
 };
 
 #endif
