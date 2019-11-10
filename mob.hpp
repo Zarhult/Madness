@@ -2,21 +2,24 @@
 #define __MOB_HPP__
 
 #include "entity.hpp"
+#include <string>
 
 class mobBase : public entity {
     protected:
         int ev;
         int str;
         int hp;
+        std::string description;
     public:
-        mobBase(int ev, int str, int hp, char img) : ev(ev), str(str), hp(hp), entity(img) {};
+        mobBase(int ev, int str, int hp, std::string description, char img) : ev(ev), str(str), hp(hp), description(description), entity(img) {};
 
         // Pure virtual mob functions
 };
 
-class eldritchBitch : public mobBase {
+class cultist : public mobBase {
     public:
-        eldritchBitch() : mobBase(5, 5, 5, '$') {};
+        std::string description = "Worshippers of the Dark One who have self-mutilated for dark power, which has corroded their sanity and made them dangerous and unpredictable.";
+        cultist() : mobBase(5, 5, 5, description, '$') {};
 };
 
 #endif

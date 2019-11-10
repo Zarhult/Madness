@@ -4,8 +4,6 @@
 #include "mob.hpp"
 #include "player.hpp"
 
-using namespace std;
-
 int main() {
     initscr(); //initialize
     cbreak(); //don't wait for the user to hit enter
