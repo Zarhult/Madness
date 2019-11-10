@@ -32,7 +32,8 @@ int main() {
         }
     }
 
-    //initialize player
+    //initialize player and vector of mobs
+    std::vector<mobBase*> mobs;
     player* plyr = new player;
     plyr->setYX(row/2, (col/2-1)/2, win1);
 
@@ -40,13 +41,26 @@ int main() {
         switch(ch) {
             case KEY_LEFT:
                 plyr->shiftPos(-1, 0, win1);
+                break;
             case KEY_RIGHT:
                 plyr->shiftPos(1, 0, win1);
+                break;
             case KEY_UP:
                 plyr->shiftPos(0, -1, win1);
+                break;
             case KEY_DOWN:
                 plyr->shiftPos(0, 1, win1);
+                break;
         }
+        for (int i = 0; i < mobs.size(); ++i) {
+            if (mobs.at(i)->getX() == plyr->getX() && mobs.at(i)->getY() == plyr->getY()) {
+                mobs.at(i)->event(win2);
+            }
+        }
+
+        refresh(); //redraw the grid
+        wrefresh(win1);
+        wrefresh(win2);
     }
 
     getch();
