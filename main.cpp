@@ -49,7 +49,7 @@ int main() {
             case KEY_RIGHT:
                 plyr->shiftPos(1, 0, win1);
             case KEY_UP:
-                plyr->shiftPos(0, 1, win1);
+                plyr->shiftPos(0, -1, win1);
             case KEY_DOWN:
                 plyr->shiftPos(0, 1, win1);
         }

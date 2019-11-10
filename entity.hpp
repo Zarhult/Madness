@@ -31,11 +31,7 @@ class entity {
             int newXPos = this->xPos + xShift;
             int newYPos = this->yPos + yShift;
             if (newXPos < col && newXPos > 0 && newYPos < row && newYPos > 0) { //don't let the player leave the window
-                mvaddch(this->yPos, this->xPos, '+');
-                
-                this->xPos = newXPos;
-                this->yPos = newYPos;
-                mvaddch(newYPos, newXPos, img);
+                this->setYX(newYPos, newXPos, win);
             }
         }
 };
