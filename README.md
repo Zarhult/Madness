@@ -1,2 +1,2 @@
-# The-Game
+# Madness
 Cutiehack 2019
