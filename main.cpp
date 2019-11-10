@@ -6,9 +6,6 @@
 
 using namespace std;
 
-void randMob(WINDOW*);
-void refreshGridEntities(vector<entity*> entities);
-
 int main() {
     initscr(); //initialize
     cbreak(); //don't wait for the user to hit enter
@@ -57,13 +54,4 @@ int main() {
     getch();
     endwin(); //end
     return 0;
-}
-
-void randMob(WINDOW* win) {
-    int row;
-    int col;
-    getmaxyx(win, row, col);
-
-    int x = rand() % col;
-    int y = rand() % row;
 }
