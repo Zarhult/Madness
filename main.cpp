@@ -1,7 +1,6 @@
 #include <ncurses.h>
 #include <stdlib.h>
 #include <vector>
-#include "drawGrid.hpp"
 #include "mob.hpp"
 #include "player.hpp"
 
