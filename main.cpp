@@ -58,6 +58,16 @@ int main() {
             }
         }
 
+        int spawnMob = rand() % 15; //1/15 chance of spawn per turn
+        mobBase* newMob;
+        if (spawnMob == 0) {
+            newMob = new cultist; //FIXME: make this a random mob
+            mobs.push_back(newMob);
+            int xPos = rand() % row/2;
+            int yPos = rand() % (col/2-1)/2;
+            newMob->setYX(xPos, yPos, win1);
+        }
+
         refresh(); //redraw the grid
         wrefresh(win1);
         wrefresh(win2);
