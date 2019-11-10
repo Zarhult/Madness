@@ -29,7 +29,7 @@ class cultist : public mobBase {
             getmaxyx(win, row, col);
 
             mvprintw(8, strlen(alertMsg), alertMsg);
-            mvprintw(10, strlen(descriptionMsg), descriptionMsg);
+            //mvprintw(10, strlen(descriptionMsg), descriptionMsg);
         }
 };
 
