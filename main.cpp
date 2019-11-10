@@ -19,11 +19,10 @@ int main() {
 
     WINDOW *win1; //set up play field and info window
     win1 = newwin(row, col/2 - 1, 0, 1);
-    box(win1, 0, 0);
+    //box(win1, 0, 0);
     WINDOW *win2;
     win2 = newwin(row, col/2 - 1, 0, col/2);
-    box(win2, 0, 0);
-    refresh();
+    //box(win2, 0, 0);
     wrefresh(win1);
     wrefresh(win2);
 
