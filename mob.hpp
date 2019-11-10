@@ -3,6 +3,7 @@
 
 #include "entity.hpp"
 #include <string.h>
+#include <stdlib.h>
 
 class mobBase : public entity {
     protected:
@@ -29,6 +30,11 @@ class cultist : public mobBase {
             getmaxyx(win, row, col);
 
             mvprintw(12, col * (0.75) - strlen(alertMsg)/2, alertMsg);
+            mvprintw(13, col * (0.75)  - 4, "You died.");
+            mvprintw(14, col * (0.75) - 11, "Press any key to exit.");
+            getch();
+            endwin();
+            std::exit(0);
             //mvprintw(10, col * (0.75), descriptionMsg);
         }
 };

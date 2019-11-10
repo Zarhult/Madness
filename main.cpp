@@ -64,8 +64,8 @@ int main() {
         if (spawnMob == 0) {
             newMob = new cultist; //FIXME: make this a random mob
             mobs.push_back(newMob);
-            int xPos = rand() % row/2;
-            int yPos = rand() % (col/2-1)/2;
+            int xPos = rand() % row;
+            int yPos = rand() % col/2-1;
             newMob->setYX(xPos, yPos, win1);
         }
 
