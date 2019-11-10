@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <vector>
 
-void printtitle(){
+void printTitle(){
     int row;
     int col;
     getmaxyx(stdscr, row, col);

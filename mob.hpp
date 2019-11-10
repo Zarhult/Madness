@@ -23,13 +23,13 @@ class cultist : public mobBase {
         const char* descriptionMsg = "Worshippers of the Great Old Ones who have self-mutilated for dark power, corroding their sanity and making them dangerous and unpredictable.";
         cultist() : mobBase(5, 5, 5, alertMsg, descriptionMsg, '$') {};
 
-        virtual void event(WINDOW* win) {
+        virtual void event(WINDOW* win) { //window is stdscr!!
             int row;
             int col;
             getmaxyx(win, row, col);
 
-            mvprintw(8, strlen(alertMsg), alertMsg);
-            //mvprintw(10, strlen(descriptionMsg), descriptionMsg);
+            mvprintw(12, col * (0.75) - strlen(alertMsg)/2, alertMsg);
+            //mvprintw(10, col * (0.75), descriptionMsg);
         }
 };
 

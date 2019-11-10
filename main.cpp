@@ -3,6 +3,7 @@
 #include <vector>
 #include "mob.hpp"
 #include "player.hpp"
+#include "title.hpp"
 
 int main() {
     initscr(); //initialize
@@ -26,6 +27,7 @@ int main() {
     wrefresh(win1);
     wrefresh(win2);
 
+    printTitle();
     for (int x = 2; x <= col/2 - 2; ++x) { //initialize grid with default spaces (+)
         for (int y = 1; y <= row - 2; ++y) {
             mvaddch(y, x, '+');
@@ -54,7 +56,7 @@ int main() {
         }
         for (int i = 0; i < mobs.size(); ++i) {
             if (mobs.at(i)->getX() == plyr->getX() && mobs.at(i)->getY() == plyr->getY()) {
-                mobs.at(i)->event(win2);
+                mobs.at(i)->event(stdscr);
             }
         }
 
