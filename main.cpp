@@ -59,7 +59,7 @@ int main() {
             }
         }
 
-        int spawnMob = rand() % 15; //1/15 chance of spawn per turn
+        int spawnMob = rand() % 2; //1/2 chance of spawn per turn
         mobBase* newMob;
         if (spawnMob == 0) {
             newMob = new cultist; //FIXME: make this a random mob
