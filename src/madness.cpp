@@ -1,9 +1,11 @@
-#include <ncurses.h>
 #include <stdlib.h>
 #include <vector>
+#include <ncurses.h>
 #include "mob.hpp"
+#include "cultist.hpp"
 #include "player.hpp"
-#include "title.hpp"
+
+void printTitle();
 
 int main() {
     initscr(); //initialize
@@ -38,7 +40,7 @@ int main() {
     player* plyr = new player;
     plyr->setYX(row/2, (col/2-1)/2, win1);
 
-    while(ch = getch()) { //main loop
+    while( (ch = getch()) ) { //main loop
         switch(ch) {
             case KEY_LEFT:
                 plyr->shiftPos(-1, 0, win1);
@@ -77,4 +79,19 @@ int main() {
     getch();
     endwin(); //end
     return 0;
+}
+
+void printTitle () {
+    int row;
+    int col;
+    getmaxyx(stdscr, row, col);
+
+    int val = col * (0.75) - 20;
+    mvprintw(2 , val, "  __  __           _                     ");
+    mvprintw(3 , val, " |  \\/  |         | |                    ");
+    mvprintw(4 , val, " | \\  / | __ _  __| |_ __   ___  ___ ___ ");
+    mvprintw(5 , val, " | |\\/| |/ _' |/ _` | '_ \\ / _ \\/ __/ __|");
+    mvprintw(6 , val, " | |  | | (_| | (_| | | | |  __/\\__ \\__ \\");
+    mvprintw(7 , val, " |_|  |_|\\__,_|\\__,_|_| |_|\\___||___/___/");
+    mvprintw(8 , val, "----------------------------------------");
 }
