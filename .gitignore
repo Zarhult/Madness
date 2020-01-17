@@ -5,6 +5,8 @@ CMakeFiles/
 Makefile
 
 # ccls/coc.nvim
+Debug/
+compile_commands.json
 .ccls
 .ccls-cache/
 
