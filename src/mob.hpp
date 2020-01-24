@@ -11,7 +11,7 @@ class mobBase : public entity {
         const char* alert;
         const char* description;
     public:
-        mobBase(int ev, int str, int hp, const char* alert, const char *description, char img); 
+        mobBase(int ev, int str, int hp, char img); 
 
         virtual void event(WINDOW* win) = 0;
 };

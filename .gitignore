@@ -4,11 +4,12 @@ CMakeCache.txt
 CMakeFiles/
 Makefile
 
-# ccls/coc.nvim
+# ccls/ale
 Debug/
 compile_commands.json
 .ccls
 .ccls-cache/
+.clangd
 
 # executables
 a.out
